@@ -1,27 +1,35 @@
-# FrontEndHmax
+﻿# Front-End  Angular Teste HMax
+> Front-end que consume CRUD da API criada no back-end
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.2.
+Front-End desenvolvido em Angular com objetivo de consumir CRUD de uma entidade de produtos e autenticação/autorização para a usuários. 
+Foi desenvolvida como parte do teste requisitado pela HMax.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Configuração para Desenvolvimento
+Instalar as dependências com:
+```sh
+npm install 
+```
 
-## Code scaffolding
+Para inicializar a API:
+```sh
+ng serve
+```
+## Detalhes
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Esse front-end não foi finalizado.
+Foi uma tentativa minha de criar o front-end mesmo sem nenhum conhecimento prévio de Angular. Essa foi a primeira vez que vi algo em Angular e também a primeira vez que tentei programar algo em Angular. Existem diversos erros e claramente não representa um projeto feito com conhecimento do Framework.
 
-## Build
+O projeto faz autenticação usando a rota "{host}/login", onde ele verifica com a API se o usuário existe, gerando um JWT com 1d de duração. Após isso ele salva o usuário/JWT no cachê do browser.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Por falta de roteamento ele não vai para a rota "{host}/home" mas após o login feito, e JWT/user salvos, ele fica acessivel e consegue fazer chamadas para a API.
 
-## Running unit tests
+A rota "/home" cria uma tabela (feita usando Material UI) onde apresenta o Nome/Descrição/Preço dos produtos e dois botões, um para editar e outro para delete, ambos funcionando. Há também um botão para criação de um novo produto. 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+O esqueleto do front-end funciona e se comunica com a API.
 
-## Running end-to-end tests
+Faltam:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Roteamento entre as diferentes páginas.
+Autorização relativa as permissões de cada usuário.
+Melhoria na apresentação do front-end. Devido a minha dificuldade em usar Angular essa parte foi deixada em segundo plano, precisava ter as outras partes do sistema funcionando antes de "embelezar" o projeto.
